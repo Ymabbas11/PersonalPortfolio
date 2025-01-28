@@ -111,10 +111,4 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE), which allows for personal and commercial use, modification, and distribution.
-
----
-
 Feel free to contact me for any questions or feedback. Thank you for visiting my portfolio!
