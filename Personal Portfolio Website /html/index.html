@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Abbas Yunus - Interactive Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <div class="noise-overlay"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <main>
+        <section class="hero">
+            <div class="glitch-container">
+                <h1 class="glitch" data-text="Mohammed Abbas">Mohammed Abbas</h1>
+            </div>
+            <div class="typing-container">
+                <span class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+
+            <nav class="magnetic-nav">
+                <a href="#about" class="magnetic-item">About</a>
+                <a href="#education" class="magnetic-item">Education</a>
+                <a href="#skills" class="magnetic-item">Skills</a>
+                <a href="#projects" class="magnetic-item">Projects</a>
+                <a href="#contact" class="magnetic-item">Contact</a>
+            </nav>
+        </section>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow-scroll">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </main>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Mohammed Abbas</span></h1>
+            <p class="subtitle">Computing Science Professional</p>
+            <p class="graduation">Graduating December 2024 | Thompson Rivers University</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="primary-btn">View My Work</a>
+                <a href="#contact" class="secondary-btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section fade-in">
+        <div class="about-container">
+            <h2 class="section-title" data-text="About Me">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm a dedicated Computing Science student graduating in April 2025 from Thompson Rivers
+                        University. Passionate about technology and innovation, I thrive in environments where I can
+                        learn, grow, and contribute meaningfully.</p>
+
+                    <p class="highlight-text">As someone who values continuous improvement and problem-solving, I'm
+                        excited about embarking on a career in cybersecurity, where I can combine my analytical mindset
+                        with my love for creating impactful solutions.</p>
+
+                    <p>My journey so far has been a mix of academic excellence and practical experiences, and I'm eager
+                        to bring that dedication into my professional endeavors.</p>
+
+                    <p>Outside of academics, I enjoy staying updated with emerging technologies, exploring creative
+                        ideas, and collaborating with others to tackle meaningful challenges. I look forward to
+                        connecting and exploring opportunities to make a difference in the tech world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section fade-in">
+        <div class="education-container">
+            <h2 class="section-title" data-text="Education">Education</h2>
+            <div class="education-timeline">
+                <div class="education-card">
+                    <div class="education-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Bachelor of Computing Science</h3>
+                        <span class="education-date">2021 - 2025</span>
+                    </div>
+                    <div class="education-content">
+                        <h4>Thompson Rivers University</h4>
+                        <p class="graduation-date">Graduating April 2025</p>
+                        <ul class="education-details">
+                            <li>Network Security and Ethical Hacking</li>
+                            <li>Computer Networks</li>
+                            <li>Advanced Database Systems & Database Design</li>
+                            <li>Web Development and Design</li>
+                            <li>Artificial Intelligence Applications</li>
+                            <li>Data Structures and Algorithms</li>
+                            <li>Discrete Mathematics for Computing</li>
+                            <li>Formal Languages and Computation</li>
+                            <li>Mobile App Development</li>
+                            <li>Operating Systems</li>
+                            <li>Software Architecture and Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills fade-in">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skills-category">
+                <h3><i class="devicon-python-plain"></i> Programming Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-python-plain colored"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-c-plain colored"></i>
+                        <span>C</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        <span>C++</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-java-plain colored"></i>
+                        <span>Java</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="skills-category">
+                <h3><i class="fas fa-shield-alt"></i> Cybersecurity</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="fas fa-search"></i>
+                        <span>Security Analysis</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="fas fa-lock"></i>
+                        <span>Encryption</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Security Auditing</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="fas fa-shield-virus"></i>
+                        <span>Incident Response</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="fas fa-bug"></i>
+                        <span>Penetration Testing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Technologies -->
+            <div class="skills-category">
+                <h3><i class="devicon-html5-plain"></i> Web Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-flask-plain colored"></i>
+                        <span>Flask</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="skills-category">
+                <h3><i class="devicon-mysql-plain"></i> Databases</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-mysql-plain colored"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-oracle-plain colored"></i>
+                        <span>Oracle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skills-category">
+                <h3><i class="devicon-git-plain"></i> Tools & Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <img src="https://www.kali.org/images/kali-dragon-icon.svg" class="custom-icon"
+                            alt="Kali Linux">
+                        <span>Kali Linux</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-android-plain colored"></i>
+                        <span>Android</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-firebase-plain colored"></i>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-vscode-plain colored"></i>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <i class="devicon-heroku-plain colored"></i>
+                        <span>Heroku</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" class="custom-icon"
+                            alt="Postman">
+                        <span>Postman</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <img src="https://www.wireshark.org/assets/theme-2015/images/wireshark_logo.png"
+                            class="custom-icon" alt="Wireshark">
+                        <span>Wireshark</span>
+                    </div>
+                    <div class="skill-item" data-tilt data-tilt-scale="1.1">
+                        <img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg"
+                            class="custom-icon" alt="Power BI">
+                        <span>Power BI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects fade-in">
+        <h2 class="section-title" data-text="Featured Projects">Featured Projects</h2>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="webtech">Web Technologies</button>
+            <button class="filter-btn" data-filter="software">Software Development</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Trip Inspection System -->
+            <div class="project-card" data-tilt data-category="enterprise">
+                <div class="project-header">
+                    <h3>
+                        <i class="fas fa-laptop-code"></i> Trip Inspection System
+                    </h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                        <span class="project-badge">Capstone Project</span>
+                        <img src="assets/dawson-logo.png" alt="Dawson Logo" class="company-logo">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">Real-time fleet monitoring system for Dawson Road Maintenance,
+                        tracking truck movements and inspection compliance through integrated APIs.</p>
+                    <ul class="project-details">
+                        <li>Real-time geofence alerts and tracking</li>
+                        <li>Automated inspection compliance</li>
+                        <li>Email notification system</li>
+                        <li>Analytics dashboard integration</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>PostgreSQL</span>
+                        <span>Power BI</span>
+                    </div>
+                    <a href="https://github.com/Ymabbas/DRM-TripInspection" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- Book Store App -->
+            <div class="project-card" data-tilt data-category="mobile">
+                <div class="project-header">
+                    <h3><i class="fas fa-book-reader"></i> Book Store App</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">Modern Android book app with advanced UI/UX features</p>
+                    <ul class="project-details">
+                        <li>Firebase authentication integration</li>
+                        <li>Dynamic recycler view with transitions</li>
+                        <li>Intuitive book management system</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Android</span>
+                        <span>Firebase</span>
+                        <span>Java</span>
+                    </div>
+                    <a href="https://github.com/Ymabbas11/BookStoreApp" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- Movie Rating Prediction -->
+            <div class="project-card" data-tilt data-category="ml">
+                <div class="project-header">
+                    <h3><i class="fas fa-film"></i> Movie Rating Prediction</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">Data mining project for IMDb rating prediction</p>
+                    <ul class="project-details">
+                        <li>Linear Regression model development</li>
+                        <li>Feature engineering & data cleaning</li>
+                        <li>Power BI visualization integration</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>ML</span>
+                        <span>Power BI</span>
+                    </div>
+                    <a href="https://github.com/Ymabbas11/MovieRatingAnalysis" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- Event Management System -->
+            <div class="project-card" data-tilt data-category="software">
+                <div class="project-header">
+                    <h3><i class="fas fa-calendar-alt"></i> Event Management System</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">A comprehensive platform for university event scheduling and
+                        management</p>
+                    <ul class="project-details">
+                        <li>Multi-role event creation and approval system</li>
+                        <li>Dynamic room booking with conflict prevention</li>
+                        <li>FIFO-based waitlist management</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>OOD</span>
+                        <span>Java</span>
+                        <span>Database Systems</span>
+                    </div>
+                    <a href="https://github.com/Ymabbas11/EventManagementSystem" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- Neural Network Design -->
+            <div class="project-card" data-tilt data-category="ml">
+                <div class="project-header">
+                    <h3><i class="fas fa-brain"></i> Stippled Art Neural Network</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">Custom AI for generating artistic stippled images</p>
+                    <ul class="project-details">
+                        <li>Custom neural network architecture</li>
+                        <li>Progressive training implementation</li>
+                        <li>SSIM-based evaluation system</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Neural Networks</span>
+                        <span>Computer Vision</span>
+                    </div>
+                    <a href="https://github.com/Ymabbas11/AIStippleArtGenerator" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- International Hotel Website -->
+            <div class="project-card" data-tilt data-category="webtech">
+                <div class="project-header">
+                    <h3><i class="fas fa-hotel"></i> International Hotel Website</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">Responsive hotel website with booking system</p>
+                    <ul class="project-details">
+                        <li>Booking system integration</li>
+                        <li>CMS implementation</li>
+                        <li>Responsive design</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>CMS</span>
+                    </div>
+                    <a href="https://github.com/Ymabbas11/InternationalHotelWebsite" class="project-link"
+                        target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- BookSmart -->
+            <div class="project-card" data-tilt data-category="mobile">
+                <div class="project-header">
+                    <h3><i class="fas fa-mobile-alt"></i> BookSmart</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">Mobile application for community space booking with real-time
+                        features</p>
+                    <ul class="project-details">
+                        <li>Firebase-powered booking management system</li>
+                        <li>Push notification integration</li>
+                        <li>Recurring booking templates</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Android</span>
+                        <span>Firebase</span>
+                        <span>Java</span>
+                    </div>
+                    <a href="https://github.com/Ymabbas11/BookSmart" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study Group Finder -->
+            <div class="project-card" data-tilt data-category="webtech">
+                <div class="project-header">
+                    <h3><i class="fas fa-users"></i> Study Group Finder</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">A comprehensive web platform for students to create, join, and manage
+                        study groups with real-time collaboration features.</p>
+                    <ul class="project-details">
+                        <li>Secure user authentication system</li>
+                        <li>Real-time chat and file sharing</li>
+                        <li>Study session scheduling and management</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Bootstrap</span>
+                        <span>AJAX</span>
+                    </div>
+                    <a href="https://github.com/Ymabbas11/StudyGroupFinder" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section fade-in">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card" data-tilt>
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:ymabbas11@gmail.com" class="contact-link">ymabbas11@gmail.com</a>
+                    </div>
+                    <div class="contact-card" data-tilt>
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/mohd-abbas-yunus/" class="contact-link"
+                            target="_blank">Connect on LinkedIn</a>
+                    </div>
+                    <div class="contact-card" data-tilt>
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/Ymabbas11" class="contact-link" target="_blank">View my projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Mohammed Abbas Yunus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Typing effect
+        const texts = ['Computing Science Professional', 'Problem Solver', 'Creative Developer'];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentText = texts[textIndex];
+            const typingText = document.querySelector('.typing-text');
+
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            const speed = isDeleting ? 100 : 200;
+            setTimeout(typeEffect, speed);
+        }
+
+        typeEffect();
+
+        // Magnetic effect for nav items
+        document.querySelectorAll('.magnetic-item').forEach(button => {
+            button.addEventListener('mousemove', (e) => {
+                const position = button.getBoundingClientRect();
+                const x = e.pageX - position.left - position.width / 2;
+                const y = e.pageY - position.top - position.height / 2;
+
+                button.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'translate(0px, 0px)';
+            });
+        });
+
+        // Three.js Background Animation
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({
+            canvas: document.querySelector('#bg-canvas'),
+            antialias: true
+        });
+
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.position.setZ(30);
+
+        // Create particles
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlesCount = 5000;
+        const posArray = new Float32Array(particlesCount * 3);
+
+        for (let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 100;
+        }
+
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.005,
+            color: 0x00ffd5,
+            blending: THREE.AdditiveBlending
+        });
+
+        const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        scene.add(particlesMesh);
+
+        // Custom cursor
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('#cursor');
+            const cursorBlur = document.querySelector('#cursor-blur');
+
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+
+            cursorBlur.style.left = e.clientX - 20 + 'px';
+            cursorBlur.style.top = e.clientY - 20 + 'px';
+        });
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            particlesMesh.rotation.x += 0.0001;
+            particlesMesh.rotation.y += 0.0002;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".project-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        const particlesConfig = {
+            particles: {
+                number: {
+                    value: 50,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#00ffd5"
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    color: "#00ffd5",
+                    opacity: 0.2
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true
+                }
+            }
+        };
+
+        particlesJS('bg-canvas', particlesConfig);
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.project-card', {
+            delay: 200,
+            distance: '50px',
+            duration: 1000,
+            origin: 'bottom',
+            interval: 200,
+            rotate: { x: 20, z: -10 }
+        });
+
+        ScrollReveal().reveal('.skill-item', {
+            delay: 50,
+            distance: '30px',
+            duration: 500,
+            origin: 'left',
+            interval: 50
+        });
+
+        ScrollReveal().reveal('.about-content', {
+            delay: 200,
+            distance: '50px',
+            duration: 1000,
+            origin: 'right'
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Remove loading screen
+            const loading = document.querySelector('.loading');
+            if (loading) {
+                loading.style.opacity = '0';
+                setTimeout(() => loading.remove(), 500);
+            }
+
+            // Fade in elements on scroll
+            const fadeElems = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            fadeElems.forEach(elem => observer.observe(elem));
+        });
+    </script>
+
+    <script>
+        // Project filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                console.log('Selected filter:', filter);
+
+                projectCards.forEach(card => {
+                    console.log('Card category:', card.dataset.category);
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
